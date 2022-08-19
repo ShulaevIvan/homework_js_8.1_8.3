@@ -24,6 +24,9 @@ window.addEventListener('DOMContentLoaded', ()=>{
 
             if(isElementCompletelyInViewPort(revals[i])){
                 revals[i].classList.add('reveal_active')
+            }
+            else {
+                revals[i].classList.remove('reveal_active')
             };
         };
     });

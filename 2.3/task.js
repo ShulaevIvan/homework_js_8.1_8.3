@@ -8,9 +8,6 @@ function checkStatus(el, pTag, elTag, classStatus, colArr) {
     if (el) {
         tag.forEach((item)=> item.classList.remove(`${classStatus}`))
         el.classList.add(`${classStatus}`)
-    }
-    else if (atrTag != 'gray' && dataAtr != 'whitesmoke') {
-
     };
 };
 
@@ -37,8 +34,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
             )
 
             book.classList.add('book_bg-black')
-            book.classList.remove('book_bg-gray')
-            book.classList.remove('book_bg-white')
+            book.classList.remove('book_bg-gray', 'book_bg-white')
         }
         else if (targetAtr == 'gray') {
 
@@ -48,8 +44,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
             )
 
             book.classList.add('book_bg-gray')
-            book.classList.remove('book_bg-black')
-            book.classList.remove('book_bg-white')
+            book.classList.remove('book_bg-black', 'book_bg-white')
         }
         else {
 
@@ -59,8 +54,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
             )
 
             book.classList.add('book_bg-white')
-            book.classList.remove('book_bg-black')
-            book.classList.remove('book_bg-gray')
+            book.classList.remove('book_bg-black','book_bg-gray')
         };
     });
 
@@ -80,8 +74,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
             )
 
             book.classList.add('book_color-black')
-            book.classList.remove('book_color-gray')
-            book.classList.remove('book_color-whitesmoke')
+            book.classList.remove('book_color-gray', 'book_color-whitesmoke')
         }
         else if (targetAtr == 'gray') {
 
@@ -91,8 +84,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
             )
 
             book.classList.add('book_color-gray')
-            book.classList.remove('book_color-black')
-            book.classList.remove('book_color-whitesmoke')
+            book.classList.remove('book_color-black', 'book_color-whitesmoke')
         }
         else {
 
@@ -102,8 +94,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
             )
 
             book.classList.add('book_color-whitesmoke')
-            book.classList.remove('book_color-black')
-            book.classList.remove('book_color-gray')
+            book.classList.remove('book_color-black','book_color-gray')
         };
     });
 
@@ -139,8 +130,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
                 ['font-size_small', 'font-size_big']
             )
 
-            book.classList.remove('book_fs-big')
-            book.classList.remove('book_fs-small')
+            book.classList.remove('book_fs-big','book_fs-small')
         };
     });
 
