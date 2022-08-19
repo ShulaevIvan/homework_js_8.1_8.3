@@ -2,20 +2,19 @@ window.addEventListener('DOMContentLoaded', ()=> {
 
     function roator(roatorActiveTag){
 
-        let allRouters = Array.from(document.querySelectorAll('.rotator__case'))
-        let currentSpeed = Number(document.querySelector('.rotator__case_active').getAttribute('data-speed'))
+        let allRouters = document.querySelectorAll('.rotator__case')
 
         allRouters.forEach((item)=>{
 
             let itemColor = item.getAttribute('data-color')
             item.style.color = itemColor
+
         });
 
-        let roatorInterval = setInterval(function intervalR() {
+        setInterval(()=>{
 
             let roatorActive = document.querySelector(`.${roatorActiveTag}`)
-            let roatorSpeed = Number(roatorActive.getAttribute('data-speed'))
-            let nextRoator = roatorActive.nextElementSibling
+            let nextRoator = roatorActive.nextElementSibling       
 
             if (nextRoator != null){
 
@@ -28,10 +27,7 @@ window.addEventListener('DOMContentLoaded', ()=> {
                 roatorActive = document.querySelector('.rotator').firstElementChild
                 roatorActive.classList.add('rotator__case_active')
             };
-            clearInterval(roatorInterval)
-            roatorInterval = setInterval(intervalR, roatorSpeed)
-
-        }, currentSpeed)   
+        }, 1000)   
     };
 
     roator('rotator__case_active')
